@@ -9,7 +9,7 @@ for i in `seq 10`
 do
 	#rand=$(echo $RANDOM|md5sum|sed 's#[^a-z]##g'|cut -c 2-11)
 	rand=$(openssl rand -base64 40|sed 's#[^a-z]##g'|cut -c 2-11)
-	touch rand/${rand}_dog.html
+	touch $dir/${rand}_dog.html
 done
 
 
